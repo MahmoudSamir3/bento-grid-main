@@ -1,0 +1,35 @@
+:root {
+  /* 🎨 Colors */
+  --Purple100: hsl(254, 88%, 90%);
+  --Purple500: hsl(256, 67%, 59%);
+  --Yellow100: hsl(31, 66%, 93%);
+  --Yellow500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+  --Grey: hsl(0, 0%, 30%);
+
+  /* 🖋️ Fonts */
+  --Font-headline: "Young Serif", serif;
+  --Font-body: "DM Sans", sans-serif;
+}
+
+/* 🔧 Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--Font-headline);
+  background-color: #f9f9f9;
+  color: var(--Black);
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

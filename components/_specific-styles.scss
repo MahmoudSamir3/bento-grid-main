@@ -1,0 +1,101 @@
+.create-section {
+  background-color: var(--Yellow100);
+}
+.create-section p {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.quicker-span {
+  color: var(--Purple500);
+}
+
+/* Write */
+.write-section {
+  background-color: var(--Yellow500);
+}
+.write-section p {
+  font-size: 3rem;
+}
+
+/* Social */
+.social-section {
+  background-color: var(--Purple500);
+  color: var(--White);
+  font-size: 3.5rem;
+}
+.social-section p span {
+  color: var(--Yellow500);
+}
+.social-section img {
+  width: 300px;
+}
+.stars-container {
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Manage */
+.manage-section {
+  background-color: var(--White);
+  font-size: 2.5rem;
+}
+
+/* Maintain */
+.maintain-section {
+  background-color: var(--Yellow500);
+  font-size: 2.5rem;
+}
+
+/* Schedule */
+.schedule-section {
+  background-color: var(--Purple100);
+  padding-left: 2rem;
+  align-items: flex-start;
+}
+.schedule-section p:first-of-type {
+  font-size: 2.5rem;
+}
+.schedule-section p:last-of-type {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--Grey);
+  margin-top: 1rem;
+}
+.schedule-section img {
+  height: 500px;
+}
+
+/* Faster */
+.faster-section {
+  background-color: var(--White);
+  text-align: center;
+}
+.faster-section span {
+  font-size: 4rem;
+  display: block;
+}
+.faster-section p {
+  font-size: 1.2rem;
+}
+
+/* Grow */
+.grow-section {
+  background-color: var(--Purple500);
+  color: var(--White);
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.grow-section img {
+  width: 50%;
+  max-width: 300px;
+}
+.grow-section p {
+  font-size: 2.5rem;
+  max-width: 50%;
+}

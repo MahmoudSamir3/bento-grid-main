@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   /* 🎨 Colors */
   --Purple100: hsl(254, 88%, 90%);
@@ -7,7 +8,6 @@
   --White: hsl(0, 0%, 100%);
   --Black: hsl(0, 0%, 7%);
   --Grey: hsl(0, 0%, 30%);
-
   /* 🖋️ Fonts */
   --Font-headline: "Young Serif", serif;
   --Font-body: "DM Sans", sans-serif;
@@ -34,23 +34,15 @@ img {
   display: block;
 }
 
-/* 🧱 Grid Container */
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, auto);
   gap: 20px;
   padding: 20px;
-  grid-template-areas:
-    "create social social schedule"
-    "create social social schedule"
-    "create manage maintain schedule"
-    "write  manage maintain schedule"
-    "write  faster  grow      grow"
-    "write  faster  grow      grow";
+  grid-template-areas: "create social social schedule" "create social social schedule" "create manage maintain schedule" "write  manage maintain schedule" "write  faster  grow      grow" "write  faster  grow      grow";
 }
 
-/* 🧩 Section Base */
 section {
   border-radius: 10px;
   padding: 20px 10px;
@@ -74,41 +66,46 @@ section:hover {
   font-family: var(--Font-body);
 }
 
-/* 🔲 Grid Area Assignments */
 .create-section {
   grid-area: create;
 }
+
 .write-section {
   grid-area: write;
 }
+
 .social-section {
   grid-area: social;
 }
+
 .manage-section {
   grid-area: manage;
 }
+
 .maintain-section {
   grid-area: maintain;
 }
+
 .schedule-section {
   grid-area: schedule;
 }
+
 .faster-section {
   grid-area: faster;
 }
+
 .grow-section {
   grid-area: grow;
 }
 
-/* 🎨 Section-Specific Styles */
-
-/* Create */
 .create-section {
   background-color: var(--Yellow100);
 }
+
 .create-section p {
   font-size: clamp(2rem, 4vw, 3rem);
 }
+
 .quicker-span {
   color: var(--Purple500);
 }
@@ -117,6 +114,7 @@ section:hover {
 .write-section {
   background-color: var(--Yellow500);
 }
+
 .write-section p {
   font-size: 3rem;
 }
@@ -127,12 +125,15 @@ section:hover {
   color: var(--White);
   font-size: 3.5rem;
 }
+
 .social-section p span {
   color: var(--Yellow500);
 }
+
 .social-section img {
   width: 300px;
 }
+
 .stars-container {
   font-size: 1.5rem;
   letter-spacing: 4px;
@@ -161,15 +162,18 @@ section:hover {
   padding-left: 2rem;
   align-items: flex-start;
 }
+
 .schedule-section p:first-of-type {
   font-size: 2.5rem;
 }
+
 .schedule-section p:last-of-type {
   font-size: 1.5rem;
   font-weight: 300;
   color: var(--Grey);
   margin-top: 1rem;
 }
+
 .schedule-section img {
   height: 500px;
 }
@@ -179,10 +183,12 @@ section:hover {
   background-color: var(--White);
   text-align: center;
 }
+
 .faster-section span {
   font-size: 4rem;
   display: block;
 }
+
 .faster-section p {
   font-size: 1.2rem;
 }
@@ -196,126 +202,15 @@ section:hover {
   justify-content: center;
   align-items: center;
 }
+
 .grow-section img {
   width: 50%;
   max-width: 300px;
 }
+
 .grow-section p {
   font-size: 2.5rem;
   max-width: 50%;
-}
-
-/* 📱 Responsive Design */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "create  social"
-      "create  social"
-      "write   schedule"
-      "manage  maintain"
-      "faster  grow"
-      "faster  grow";
-  }
-}
-
-/* Mobiles */
-@media (max-width: 768px) {
-  body {
-    height: 440vh;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    position: relative;
-  }
-
-  .container {
-    grid-template-columns: 1fr;
-    padding: 10px;
-    grid-template-areas:
-      "social"
-      "manage"
-      "maintain"
-      "schedule"
-      "grow"
-      "create"
-      "write"
-      "faster";
-  }
-
-  section {
-    padding: 1rem;
-  }
-
-  .create-section p,
-  .write-section p,
-  .maintain-section p,
-  .grow-section p,
-  .schedule-section p:first-of-type {
-    font-size: clamp(2rem, 4vw, 3rem);
-  }
-
-  .schedule-section p:last-of-type {
-    font-size: 1rem;
-  }
-
-  .social-section {
-    font-size: 1.8rem;
-    line-height: 1;
-  }
-
-  .social-section span {
-    font-size: 2.5rem;
-  }
-
-  .manage-section {
-    line-height: 1;
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-  }
-
-  .social-section img {
-    width: 130px;
-    margin: 0 auto;
-  }
-
-  .over {
-    font-size: 0.7rem;
-    font-weight: 300;
-    letter-spacing: 5px;
-  }
-
-  .grow-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .grow-section img,
-  .grow-section p {
-    width: 100%;
-    max-width: 100%;
-    justify-content: center;
-  }
-
-  .schedule-section img {
-    height: 300px;
-  }
-
-  .faster-section p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-
-  .faster-section span {
-    font-size: 2.5rem;
-    display: block;
-  }
-
-  .faster-section img {
-    max-width: 70%;
-    height: auto;
-  }
 }
 
 /* Footer Attribution */
@@ -323,6 +218,7 @@ section:hover {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
+}/*# sourceMappingURL=style.css.map */
